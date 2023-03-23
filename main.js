@@ -1,7 +1,7 @@
 let decoderWorkerBlob = URL.createObjectURL(new Blob([
   '(function() {})()'
 ], { type: 'application/javascript' }))
-console.log('v1')
+console.log('v2')
 
 function setupLiveReader(resultElement) {
   var container = document.createElement('div')
@@ -135,7 +135,7 @@ BarcodeScanner = {
 	Stream : null, // The actual video.
 	DecodeStreamActive : false, // Will be set to false when StopStreamDecode() is called.
 	Decoded : [], // Used to enfore the ForceUnique property.
-	DecoderWorker : new Worker(decoderWorkerBlob),
+	DecoderWorker : new Worker("DecoderWorker.js"),
 	OrientationCallback : null,
 	// Always call the Init().
 	init : function() {
