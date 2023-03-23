@@ -2101,8 +2101,8 @@ const DecoderWorkerStr = function() {
 		}
 	}}
 
-decoderWorkerBlob = URL.createObjectURL(new Blob([DecoderWorkerStr.toString()], { type: 'text/javascript' }))
-console.log('v9')
+decoderWorkerBlob = URL.createObjectURL(new Blob(['(',DecoderWorkerStr.toString(),')()'], { type: 'text/javascript' }))
+console.log('v10')
 
 function setupLiveReader(resultElement) {
   var container = document.createElement('div')
