@@ -23,7 +23,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ------------------------ */
 
-const DecoderWorkerStr = `
+const DecoderWorkerStr = function() {
 	function Rotate(data,width,height,rotation) {
 		var newData = [];
 		switch(rotation) {
@@ -1665,7 +1665,7 @@ const DecoderWorkerStr = `
 		"221411":{A : "]", B : "]", C : "61"},
 		"431111":{A : "^", B : "^", C : "62"},
 		"111224":{A : "_", B : "_", C : "63"},
-		"111422":{A : "NUL", B : "\`", C : "64"},
+		"111422":{A : "NUL", B : "`", C : "64"},
 		"121124":{A : "SOH", B : "a", C : "65"},
 		"121421":{A : "STX", B : "b", C : "66"},
 		"141122":{A : "ETX", B : "c", C : "67"},
@@ -2099,10 +2099,10 @@ const DecoderWorkerStr = `
 		} else {
 			postMessage({result: FinalResult, success: false});
 		}
-	}`
+	}}
 
-decoderWorkerBlob = URL.createObjectURL(new Blob([DecoderWorkerStr], { type: 'text/javascript' }))
-console.log('v8')
+decoderWorkerBlob = URL.createObjectURL(new Blob([DecoderWorkerStr.toString()], { type: 'text/javascript' }))
+console.log('v9')
 
 function setupLiveReader(resultElement) {
   var container = document.createElement('div')
