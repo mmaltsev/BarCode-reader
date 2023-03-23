@@ -29,7 +29,7 @@ THE SOFTWARE.
 
 ------------------------ */
 
-export const DecoderWorker = function(){
+const DecoderWorker = function(){
 
 	function Rotate(data,width,height,rotation) {
 		var newData = [];
