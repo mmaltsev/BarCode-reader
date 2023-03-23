@@ -23,7 +23,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ------------------------ */
 
-const DecoderWorker = `
+const DecoderWorkerStr = `
 	function Rotate(data,width,height,rotation) {
 		var newData = [];
 		switch(rotation) {
@@ -2101,8 +2101,8 @@ const DecoderWorker = `
 		}
 	}`
 
-decoderWorkerBlob = URL.createObjectURL(new Blob([DecoderWorker], { type: 'text/javascript' }))
-console.log('v7')
+decoderWorkerBlob = URL.createObjectURL(new Blob([DecoderWorkerStr], { type: 'text/javascript' }))
+console.log('v8')
 
 function setupLiveReader(resultElement) {
   var container = document.createElement('div')
