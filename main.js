@@ -1,7 +1,7 @@
 let decoderWorkerBlob = URL.createObjectURL(new Blob([
   '(function() {})()'
 ], { type: 'application/javascript' }))
-console.log('v4')
+console.log('v5')
 
 function setupLiveReader(resultElement) {
   var container = document.createElement('div')
@@ -31,7 +31,7 @@ function setupLiveReader(resultElement) {
   }
   
   decoderWorkerBlob = URL.createObjectURL(new Blob([
-	  '(',DecoderWorker.toString(),')()'
+	  '(',DecoderWorker,')()'
   ], { type: 'application/javascript' }))
 
   navigator.mediaDevices
