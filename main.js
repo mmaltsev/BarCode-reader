@@ -1,6 +1,7 @@
 let decoderWorkerBlob = URL.createObjectURL(new Blob([
   '(function() {})()'
 ], { type: 'application/javascript' }))
+console.log('v1')
 
 function setupLiveReader(resultElement) {
   var container = document.createElement('div')
