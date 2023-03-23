@@ -2,7 +2,7 @@ let decoderWorkerBlob = URL.createObjectURL(new Blob([
   '(function() {})()'
 ], { type: 'application/javascript' }))
 
-export function setupLiveReader(resultElement, DecoderWorker) {
+function setupLiveReader(resultElement, DecoderWorker) {
   var container = document.createElement('div')
 
   container.style.position = 'absolute'
