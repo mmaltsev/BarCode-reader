@@ -12,11 +12,12 @@
   <p id="code">code will appear here</p>
 
 <!--   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
-  <script src="BarcodeScanner.js"></script>
-  <script src="app.js"></script>
+<!--   <script src="BarcodeScanner.js"></script> -->
+  <script src="decoder.js"></script>
+  <script src="main.js"></script>
   <script>
     var resultElement = document.getElementById('code')
-    setupLiveReader(resultElement)
+    setupLiveReader(resultElement, DecoderWorker)
   </script>
 </body>
 
